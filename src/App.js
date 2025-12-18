@@ -1,12 +1,23 @@
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
+import { useUser } from "./context/UserContext";
 
-import AppRoutes from './routes/AppRoutes';
-import React from 'react';
+import PropietarioLayout from "./Layouts/PropietarioLayout";
+import InquilinoLayout from "./Layouts/InquilinoLayout";
+
 function App() {
+  const { userType } = useUser();
+
   return (
-    <Router>
-      <AppRoutes />
-    </Router>    
+    <Routes>
+      <Route
+        path="/*"
+        element={
+          userType === "propietario"
+            ? <PropietarioLayout />
+            : <InquilinoLayout />
+        }
+      />
+    </Routes>
   );
 }
 

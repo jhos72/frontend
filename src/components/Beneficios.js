@@ -1,74 +1,61 @@
-import React from 'react'
-import { Container, Row, Col, Card } from 'react-bootstrap'
+import { Container, Row, Col, Card } from "react-bootstrap"
+import { useUser } from "../context/UserContext"
+import { beneficiosOptions } from "../utils/beneficiosOptions.js"
 
 const Beneficios = () => {
+    const { userType } = useUser()
+    const content = beneficiosOptions[userType]
+
+    const primary = "#1F4E79"
+    const accent = "#F3A712"
+    const neutralLight = "#F7F9FC"
+
     return (
-        <Container className="py-5">
-            <div className="text-center mb-5">
-                <h2 className="fw-bold" style={{ color: '#333333' }}>
-                    Beneficios principales
-                </h2>
-                <p style={{ color: '#333333' }}>
-                    Encuentra alquileres seguros, verificados y listos para contratos de larga duración.
-                </p>
-            </div>
+        <section style={{ backgroundColor: neutralLight }}>
+            <Container className="py-5">
 
-            <Row className="g-4">
+                {/* HEADER */}
+                <div className="text-center mb-5">
+                    <h2 className="fw-bold" style={{ color: primary }}>
+                        {content.title}
+                    </h2>
+                    <p className="text-muted">
+                        {content.subtitle}
+                    </p>
+                </div>
 
-                {/* 1. Contratos claros */}
-                <Col lg={3} md={6} sm={12}>
-                    <Card className="h-100 shadow-sm" style={{ backgroundColor: '#e1e1e1' }}>
-                        <Card.Body className="text-center">
-                            <i className="bi bi-file-earmark-text fs-1" style={{ color: '#333333' }}></i>
-                            <h5 className="fw-bold mt-3" style={{ color: '#333333' }}>Contratos claros y verificados</h5>
-                            <p style={{ color: '#333333' }}>
-                                Evita sorpresas. Todos los contratos son revisados y aprobados para mayor seguridad.
-                            </p>
-                        </Card.Body>
-                    </Card>
-                </Col>
+                {/* CARDS */}
+                <Row className="g-4">
+                    {content.items.map((item, index) => (
+                        <Col lg={3} md={6} sm={12} key={index}>
+                            <Card
+                                className="h-100 border-0 shadow-sm text-center"
+                                style={{
+                                    transition: "transform 0.2s ease",
+                                    cursor: "default"
+                                }}
+                            >
+                                <Card.Body>
+                                    <i
+                                        className={`bi ${item.icon} fs-1`}
+                                        style={{ color: accent }}
+                                    ></i>
 
-                {/* 2. Propiedades revisadas */}
-                <Col lg={3} md={6} sm={12}>
-                    <Card className="h-100 shadow-sm" style={{ backgroundColor: '#e1e1e1' }}>
-                        <Card.Body className="text-center">
-                            <i className="bi bi-house-check fs-1" style={{ color: '#333333' }}></i>
-                            <h5 className="fw-bold mt-3" style={{ color: '#333333' }}>Propiedades verificadas</h5>
-                            <p style={{ color: '#333333' }}>
-                                Cada inmueble pasa por un proceso de validación antes de publicarse.
-                            </p>
-                        </Card.Body>
-                    </Card>
-                </Col>
+                                    <h5 className="fw-bold mt-3" style={{ color: primary }}>
+                                        {item.title}
+                                    </h5>
 
-                {/* 3. Pagos seguros */}
-                <Col lg={3} md={6} sm={12}>
-                    <Card className="h-100 shadow-sm" style={{ backgroundColor: '#e1e1e1' }}>
-                        <Card.Body className="text-center">
-                            <i className="bi bi-shield-lock fs-1" style={{ color: '#333333' }}></i>
-                            <h5 className="fw-bold mt-3" style={{ color: '#333333' }}>Pagos y depósitos seguros</h5>
-                            <p style={{ color: '#333333' }}>
-                                Protegemos tus pagos mediante métodos seguros y transparentes.
-                            </p>
-                        </Card.Body>
-                    </Card>
-                </Col>
+                                    <p className="text-muted">
+                                        {item.description}
+                                    </p>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    ))}
+                </Row>
 
-                {/* 4. Soporte */}
-                <Col lg={3} md={6} sm={12}>
-                    <Card className="h-100 shadow-sm" style={{ backgroundColor: '#e1e1e1' }}>
-                        <Card.Body className="text-center">
-                            <i className="bi bi-headset fs-1" style={{ color: '#333333' }}></i>
-                            <h5 className="fw-bold mt-3" style={{ color: '#333333' }}>Soporte 24/7</h5>
-                            <p style={{ color: '#333333' }}>
-                                Atención rápida para ayudarte en cualquier etapa del proceso.
-                            </p>
-                        </Card.Body>
-                    </Card>
-                </Col>
-
-            </Row>
-        </Container>
+            </Container>
+        </section>
     )
 }
 

@@ -1,65 +1,73 @@
-import React from 'react'
-import { Container, Button, InputGroup, FormControl } from 'react-bootstrap'
-import HeroImg from '../assets/imag1.jpg'
+import { Container, Button, InputGroup, FormControl, Row, Col } from "react-bootstrap"
+import { useUser } from "../context/UserContext"
+import { heroOptions } from "../utils/heroOptions"
+import HeroImg from "../assets/imag1.jpg"
 
 const Hero = () => {
+    const { userType } = useUser()
+    const content = heroOptions[userType]
+
+    const primary = "#1F4E79"
+    const accent = "#F3A712"
+    const neutralLight = "#F7F9FC"
+
     return (
-        <div
-            className="py-5 mb-4 d-flex align-items-center"
+        <section
             style={{
-                backgroundImage: `url(${HeroImg})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                minHeight: '70vh',
-                color: 'white'
+                backgroundImage: `linear-gradient(
+            rgba(31, 78, 121, 0.30),
+            rgba(31, 78, 121, 0.10)
+        ), url(${HeroImg})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                minHeight: "80vh",
+                display: "flex",
+                alignItems: "center",
+                color: neutralLight
             }}
         >
             <Container>
+                <Row>
+                    <Col lg={6}>
+                        <h1 className="fw-bold display-5">{content.title}</h1>
+                        <p className="lead mt-3">{content.subtitle}</p>
+                        <p className="mt-2">{content.description}</p>
 
-                {/* TEXTO A LA IZQUIERDA */}
-                <div className="col-lg-6">
-                    <h1 className="fw-bold">
-                        Alquileres de larga duración en Bolivia de forma rápida, segura y 100% online.
-                    </h1>
-                    <br />
-                    <h4>
-                        Encuentra departamentos y casas disponibles, contratos de alquiler de larga duracion  
-                        sin complicaciones y con garantías claras.
-                    </h4>
+                        <div className="mt-4 d-flex gap-3 flex-wrap">
+                            <Button
+                                style={{
+                                    backgroundColor: accent,
+                                    color: primary,
+                                    border: "none",
+                                    fontWeight: "600"
+                                }}
+                            >
+                                {content.ctaPrimary}
+                            </Button>
 
-                    {/* BARRA DE BÚSQUEDA */}
-                    <InputGroup className="mt-4">
-                        <FormControl
-                            placeholder="Busca por ciudad, zona o tipo de inmueble"
-                            aria-label="Buscar alquileres"
-                        />
-                        <Button
-                            style={{ backgroundColor: '#d1bb9b', border: 'none', color: '#333' }}
-                        >
-                            Buscar
-                        </Button>
-                    </InputGroup>
-                </div>
+                            <Button variant="outline-light">
+                                {content.ctaSecondary}
+                            </Button>
+                        </div>
 
-                {/* CTA CENTRADO */}
-                <div className="text-center mt-5">
-                    <Button
-                        size="lg"
-                        style={{
-                            backgroundColor: '#d1bb9b',
-                            border: 'none',
-                            padding: '12px 30px',
-                            color: '#333333',
-                            fontWeight: '600',
-                            borderRadius: '8px'
-                        }}
-                    >
-                        Ver propiedades disponibles
-                    </Button>
-                </div>
-
+                        {userType === "inquilino" && (
+                            <InputGroup className="mt-4">
+                                <FormControl placeholder="Ciudad, zona o tipo de inmueble" />
+                                <Button
+                                    style={{
+                                        backgroundColor: accent,
+                                        color: primary,
+                                        border: "none"
+                                    }}
+                                >
+                                    Buscar
+                                </Button>
+                            </InputGroup>
+                        )}
+                    </Col>
+                </Row>
             </Container>
-        </div>
+        </section>
     )
 }
 
