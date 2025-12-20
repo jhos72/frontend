@@ -1,76 +1,61 @@
-import React from 'react'
-import { Container, Row, Col, Card } from 'react-bootstrap'
+import { Container, Carousel, Card } from "react-bootstrap"
+import { useUser } from "../context/UserContext"
+import { comoFuncionaOptions } from "../utils/comoFuncionaOptions"
 
 const ComoFunciona = () => {
+    const { userType } = useUser()
+    const content = comoFuncionaOptions[userType]
+
+    const primary = "#1F4E79"
+    const accent = "#F3A712"
+    const neutralLight = "#F7F9FC"
+
     return (
-        <Container className="py-5">
+        <section style={{ backgroundColor: neutralLight }}>
+            <Container className="py-5">
 
-            {/* TÍTULO */}
-            <div className="text-center mb-5">
-                <h2 className="fw-bold" style={{ color: '#333333' }}>
-                    ¿Cómo funciona la plataforma?
-                </h2>
-                <p style={{ color: '#333333' }}>
-                    Sigue estos pasos simples y renta tu próximo hogar de forma rápida y segura.
-                </p>
-            </div>
+                {/* HEADER */}
+                <div className="text-center mb-5">
+                    <h2 className="fw-bold" style={{ color: primary }}>
+                        {content.title}
+                    </h2>
+                    <p className="text-muted">
+                        {content.subtitle}
+                    </p>
+                </div>
 
-            <Row className="g-4">
+                {/* CAROUSEL */}
+                <Carousel indicators={false} interval={2000}>
+                    {content.steps.map((step, index) => (
+                        <Carousel.Item key={index}>
+                            <div className="d-flex justify-content-center">
+                                <Card
+                                    className="shadow-sm text-center border-0"
+                                    style={{
+                                        maxWidth: "420px",
+                                        padding: "30px"
+                                    }}
+                                >
+                                    <i
+                                        className={`bi ${step.icon} fs-1`}
+                                        style={{ color: accent }}
+                                    ></i>
 
-                {/* PASO 1 */}
-                <Col md={6} lg={3}>
-                    <Card className="h-100 shadow-sm" style={{ backgroundColor: '#e1e1e1' }}>
-                        <Card.Body className="text-center">
-                            <i className="bi bi-search fs-1" style={{ color: '#333333' }}></i>
-                            <h5 className="fw-bold mt-3" style={{ color: '#333333' }}>1. Busca y filtra</h5>
-                            <p style={{ color: '#333333' }}>
-                                Encuentra inmuebles por ciudad, precio, zona o tipo (casa, departamento, habitación).
-                            </p>
-                        </Card.Body>
-                    </Card>
-                </Col>
+                                    <h5 className="fw-bold mt-3" style={{ color: primary }}>
+                                        Paso {index + 1}: {step.title}
+                                    </h5>
 
-                {/* PASO 2 */}
-                <Col md={6} lg={3}>
-                    <Card className="h-100 shadow-sm" style={{ backgroundColor: '#e1e1e1' }}>
-                        <Card.Body className="text-center">
-                            <i className="bi bi-camera-video fs-1" style={{ color: '#333333' }}></i>
-                            <h5 className="fw-bold mt-3" style={{ color: '#333333' }}>2. Agenda una visita</h5>
-                            <p style={{ color: '#333333' }}>
-                                Solicita una visita presencial o un tour virtual directamente desde la plataforma.
-                            </p>
-                        </Card.Body>
-                    </Card>
-                </Col>
+                                    <p className="text-muted">
+                                        {step.description}
+                                    </p>
+                                </Card>
+                            </div>
+                        </Carousel.Item>
+                    ))}
+                </Carousel>
 
-                {/* PASO 3 */}
-                <Col md={6} lg={3}>
-                    <Card className="h-100 shadow-sm" style={{ backgroundColor: '#e1e1e1' }}>
-                        <Card.Body className="text-center">
-                            <i className="bi bi-file-earmark-check fs-1" style={{ color: '#333333' }}></i>
-                            <h5 className="fw-bold mt-3" style={{ color: '#333333' }}>3. Solicitud online</h5>
-                            <p style={{ color: '#333333' }}>
-                                Envía tu solicitud con documentos básicos y recibe aprobación rápida.
-                            </p>
-                        </Card.Body>
-                    </Card>
-                </Col>
-
-                {/* PASO 4 */}
-                <Col md={6} lg={3}>
-                    <Card className="h-100 shadow-sm" style={{ backgroundColor: '#e1e1e1' }}>
-                        <Card.Body className="text-center">
-                            <i className="bi bi-pen fs-1" style={{ color: '#333333' }}></i>
-                            <h5 className="fw-bold mt-3" style={{ color: '#333333' }}>4. Firma y mudanza</h5>
-                            <p style={{ color: '#333333' }}>
-                                Firma el contrato digital, realiza el depósito seguro y muda tu nuevo hogar.
-                            </p>
-                        </Card.Body>
-                    </Card>
-                </Col>
-
-            </Row>
-        </Container>
+            </Container>
+        </section>
     )
 }
 
