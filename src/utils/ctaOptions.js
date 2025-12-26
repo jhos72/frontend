@@ -6,7 +6,11 @@ export const ctaOptions = {
     },
     inquilino: {
         buttonText: "Encontrar mi alquiler",
-        title: "Cuéntanos qué tipo de alquiler buscas",
-        whatsappMessage: "Hola, estoy buscando un alquiler"
+        title: "Encuentra alquileres disponibles en tu ciudad",
+        action: "redirect",
+        redirectTo: "/buscar-alquiler",
+        openInNewTab: true,
+        target: "_blank",
+        whatsappMessage: "Hola, quiero buscar un alquiler"
     }
 }
