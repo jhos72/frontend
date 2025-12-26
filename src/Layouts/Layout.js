@@ -2,7 +2,7 @@ import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import { Outlet } from "react-router-dom";
 
-const InquilinoLayout = () => (
+const Layout = () => (
   <>
     <Menu />
       <Outlet />
@@ -10,4 +10,4 @@ const InquilinoLayout = () => (
   </>
 );
 
-export default InquilinoLayout;
+export default Layout;
