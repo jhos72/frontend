@@ -1,28 +1,114 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-//import MapView from "../components/map/MapView";
-//import FiltersPanel from "../components/map/FiltersPanel";
+import { Container, Row, Col, Form, Card } from "react-bootstrap";
 
-const buscarAlquiler = () => {
+const BuscarAlquiler = () => {
     return (
-        <div style={{height:'100vh',display:'flex'}}>
-            <Container>
-                <Row>
-                    <Col>
-                        <p>Filtros</p>
+        <div style={{ minHeight: "100vh", backgroundColor: "#F7F9FC" }}>
+            <Container fluid className="py-4">
+                <Row className="g-4">
+
+                    {/* ===================== */}
+                    {/* PANEL DE FILTROS */}
+                    {/* ===================== */}
+                    <Col lg={3} md={4}>
+                        <Card className="shadow-sm">
+                            <Card.Body>
+                                <h5 className="fw-bold mb-3">Filtros</h5>
+
+                                <Form>
+                                    <Form.Group className="mb-3">
+                                        <Form.Label>Departamento</Form.Label>
+                                        <Form.Select>
+                                            <option>Selecciona un departamento</option>
+                                            <option>La Paz</option>
+                                            <option>Cochabamba</option>
+                                            <option>Santa Cruz</option>
+                                        </Form.Select>
+                                    </Form.Group>
+
+                                    <Form.Group className="mb-3">
+                                        <Form.Label>Ciudad / Municipio</Form.Label>
+                                        <Form.Select>
+                                            <option>Selecciona una ciudad</option>
+                                        </Form.Select>
+                                    </Form.Group>
+
+                                    <Form.Group className="mb-3">
+                                        <Form.Label>Zona / Barrio</Form.Label>
+                                        <Form.Select>
+                                            <option>Selecciona una zona</option>
+                                        </Form.Select>
+                                    </Form.Group>
+
+                                    <Form.Group className="mb-3">
+                                        <Form.Label>Tipo de inmueble</Form.Label>
+                                        <Form.Select>
+                                            <option>Departamento</option>
+                                            <option>Casa</option>
+                                            <option>Habitación</option>
+                                        </Form.Select>
+                                    </Form.Group>
+
+                                    <Form.Group>
+                                        <Form.Label>Presupuesto mensual (Bs.)</Form.Label>
+                                        <Form.Range />
+                                    </Form.Group>
+                                </Form>
+                            </Card.Body>
+                        </Card>
                     </Col>
-                    <Col>
-                        <Row>
-                            <p>Mapa</p>
-                        </Row>
-                        <Row>
-                            <p>Lista de alquileres</p>
+
+                    {/* ===================== */}
+                    {/* MAPA + LISTA */}
+                    {/* ===================== */}
+                    <Col lg={9} md={8}>
+                        <Row className="g-4">
+
+                            {/* MAPA */}
+                            <Col xs={12}>
+                                <Card className="shadow-sm">
+                                    <Card.Body>
+                                        <h6 className="fw-bold mb-3">Mapa</h6>
+
+                                        <iframe
+                                            title="Mapa de alquileres"
+                                            width="100%"
+                                            height="350"
+                                            style={{ border: 0, borderRadius: "8px" }}
+                                            loading="lazy"
+                                            allowFullScreen
+                                            referrerPolicy="no-referrer-when-downgrade"
+                                            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_GOOGLE_MAPS_KEY}&q=Bolivia`}
+                                        />
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+
+                            {/* LISTA DE ALQUILERES */}
+                            <Col xs={12}>
+                                <Card className="shadow-sm">
+                                    <Card.Body>
+                                        <h6 className="fw-bold mb-3">
+                                            Alquileres disponibles
+                                        </h6>
+
+                                        {/* Placeholder */}
+                                        <p className="text-muted">
+                                            Aquí se mostrará la lista de propiedades filtradas.
+                                        </p>
+
+                                        {/* Futuro: RentalCard */}
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+
                         </Row>
                     </Col>
+
                 </Row>
             </Container>
         </div>
-    )
-}
+    );
+};
 
-export default buscarAlquiler
+export default BuscarAlquiler;
