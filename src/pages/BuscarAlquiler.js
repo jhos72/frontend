@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Form, Card } from "react-bootstrap";
-
+import Map from "../components/Map";
 const BuscarAlquiler = () => {
     return (
         <div style={{ minHeight: "100vh", backgroundColor: "#F7F9FC" }}>
@@ -68,18 +68,7 @@ const BuscarAlquiler = () => {
                             <Col xs={12}>
                                 <Card className="shadow-sm">
                                     <Card.Body>
-                                        <h6 className="fw-bold mb-3">Mapa</h6>
-
-                                        <iframe
-                                            title="Mapa de alquileres"
-                                            width="100%"
-                                            height="350"
-                                            style={{ border: 0, borderRadius: "8px" }}
-                                            loading="lazy"
-                                            allowFullScreen
-                                            referrerPolicy="no-referrer-when-downgrade"
-                                            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_GOOGLE_MAPS_KEY}&q=Bolivia`}
-                                        />
+                                        <Map />
                                     </Card.Body>
                                 </Card>
                             </Col>
