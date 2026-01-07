@@ -1,5 +1,5 @@
 import { Card, Button } from "react-bootstrap";
-
+import { Link } from "react-router-dom";
 const CardAlquiler = ({ propiedad }) => {
     return (
         <Card className="mb-3 shadow-sm">
@@ -19,7 +19,12 @@ const CardAlquiler = ({ propiedad }) => {
                     {propiedad.contacto.celular}
                 </Card.Text>
 
-                <Button variant="primary" size="sm">
+                <Button
+                    as={Link}
+                    to={`/buscar-alquiler/${propiedad.id}`}
+                    variant="primary"
+                    size="sm"
+                >
                     Ver detalles
                 </Button>
             </Card.Body>

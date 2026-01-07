@@ -1,14 +1,32 @@
 export const menuOptions = {
     propietario: [
-        { label: "Inicio" },
-        { label: "Nosotros" },
-        { label: "Publicar inmueble" },
-        { label: "Registrarme" }
+        {
+            label: "Inicio",
+            path: "/",
+        },
+        {
+            label: "Nosotros",
+            path: "/nosotros",
+        },
+        {
+            label: "Publicar propiedad",
+            path: "/publicar",
+        },
     ],
+
     inquilino: [
-        { label: "Inicio" },
-        { label: "Nosotros" },
-        { label: "Buscar alquiler" },
-        { label: "Registrarme" }
-    ]
+        {
+            label: "Inicio",
+            path: "/",
+        },
+        {
+            label: "Nosotros",
+            path: "/nosotros",
+        },
+        {
+            label: "Buscar alquiler",
+            path: "/buscar-alquiler", 
+
+        },
+    ],
 };

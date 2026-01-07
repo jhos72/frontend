@@ -16,6 +16,7 @@ export const heroOptions = {
         description:
             "Te ayudamos a alquilar sin complicaciones, con garantías reales y acompañamiento.",
         ctaPrimary: "Ver propiedades",
+        path: '/buscar-alquiler',
         ctaSecondary: "Contactar por WhatsApp"
     }
 }

@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Navbar, Nav, Container, Image, Form } from 'react-bootstrap'
 import { useUser } from '../context/UserContext'
 import { menuOptions } from '../utils/menuOptions'
-import LogoCasa from '../assets/logoCasa.png'
+import LogoRenta from '../assets/renta-fija-logo.png'
 
 const Menu = () => {
     const { userType, toggleUserType } = useUser()
@@ -24,7 +24,7 @@ const Menu = () => {
                 {/* LOGO */}
                 <Navbar.Brand href="/">
                     <Image
-                        src={LogoCasa}
+                        src={LogoRenta}
                         width="90"
                         height="60"
                         className="d-inline-block align-top rounded mx-3"

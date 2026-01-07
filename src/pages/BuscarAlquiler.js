@@ -33,25 +33,18 @@ const BuscarAlquiler = () => {
                                         <Form.Label>Departamento</Form.Label>
                                         <Form.Select>
                                             <option>Selecciona un departamento</option>
-                                            <option>La Paz</option>
-                                            <option>Cochabamba</option>
                                             <option>Santa Cruz</option>
                                         </Form.Select>
                                     </Form.Group>
-
+                                    {/*
                                     <Form.Group className="mb-3">
                                         <Form.Label>Ciudad / Municipio</Form.Label>
                                         <Form.Select>
                                             <option>Selecciona una ciudad</option>
                                         </Form.Select>
                                     </Form.Group>
+                                    */}
 
-                                    <Form.Group className="mb-3">
-                                        <Form.Label>Zona / Barrio</Form.Label>
-                                        <Form.Select>
-                                            <option>Selecciona una zona</option>
-                                        </Form.Select>
-                                    </Form.Group>
                                     <Form.Group className="mb-3">
                                         <Form.Label>Tipo de inmueble</Form.Label>
                                         <Form.Select
