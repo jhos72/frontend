@@ -9,7 +9,7 @@ const CardAlquiler = ({ propiedad }) => {
                 <Card.Text>
                     <strong>Zona:</strong> {propiedad.zona} <br />
                     <strong>Dirección:</strong> {propiedad.direccion} <br />
-                    {/*Aun no se usa, por confirmar <strong>Precio:</strong> Bs. {propiedad.precio}*/}
+                    <strong>Precio:</strong> Bs. {propiedad.precio}
 
                 </Card.Text>
 
