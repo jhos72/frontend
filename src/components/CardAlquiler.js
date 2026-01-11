@@ -13,11 +13,7 @@ const CardAlquiler = ({ propiedad }) => {
 
                 </Card.Text>
 
-                <Card.Text className="text-muted">
-                    Contacto: {propiedad.contacto.nombre}{" "}
-                    {propiedad.contacto.apellido} <br />
-                    {propiedad.contacto.celular}
-                </Card.Text>
+              
 
                 <Button
                     as={Link}

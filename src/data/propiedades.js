@@ -32,11 +32,11 @@ const propiedades = [
             cuartoImg2,
             cuartoImg3
         ],
-        contacto: {
+        /*contacto: {
             nombre: "José Luis",
             apellido: "Berrios",
             celular: "78625134",
-        },
+        },*/
         ubicacion: {
             lat: -17.790806,
             lng: -63.201444,
@@ -68,11 +68,11 @@ const propiedades = [
             deptoImg6,
             deptoImg7
         ],
-        contacto: {
+        /*contacto: {
             nombre: "Jose Luis",
             apellido: "Berrios",
             celular: "78625134",
-        },
+        },*/
         ubicacion: {
             lat: -17.749444,
             lng: -63.147472,

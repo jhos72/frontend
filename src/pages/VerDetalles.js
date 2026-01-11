@@ -10,6 +10,7 @@ import {
 } from "react-bootstrap";
 import Map from "../components/Map";
 import propiedades from "../data/propiedades";
+import ContactButton from "../components/ContactButton";
 
 const VerDetalles = () => {
     const { id } = useParams();
@@ -99,10 +100,10 @@ const VerDetalles = () => {
                                             {propiedad.tamanio}
                                         </ListGroup.Item>
                                     )}
-                                    
+
                                 </ListGroup>
 
-                                {/* CONTACTO */}
+                                {/* CONTACTO 
                                 <div className="mb-4">
                                     <p className="fw-bold mb-1">
                                         Contacto
@@ -114,11 +115,16 @@ const VerDetalles = () => {
                                         {propiedad.contacto.celular}
                                     </p>
                                 </div>
-
+*/}
                                 {/* BOTÓN */}
-                                <Button variant="success" size="lg">
-                                    Contactar asesor
-                                </Button>
+                                <ContactButton
+                                    telefono={propiedad.contacto?.celular || "61928711"}
+                                    mensaje={`Hola, estoy interesado en la propiedad: ${propiedad.titulo}`}
+                                    variant="success"
+                                    size="lg"
+                                >
+                                    Contactar al propietario
+                                </ContactButton>
                             </Tab>
 
                             {/* ================= TAB UBICACIÓN ================= */}

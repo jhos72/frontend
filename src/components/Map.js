@@ -13,11 +13,28 @@ const Map = ({ propiedades }) => {
         propiedades.forEach((prop) => {
             L.marker([prop.ubicacion.lat, prop.ubicacion.lng])
                 .addTo(map)
-                .bindPopup(`
-          <strong>${prop.titulo}</strong><br/>
-          ${prop.direccion}<br/>
-          Bs. ${prop.precio}
-        `);
+                .bindPopup(`<div style="font-size:14px">
+    <strong>${prop.titulo}</strong><br/>
+    ${prop.direccion}<br/>
+    <span style="color:#198754;font-weight:bold">
+      Bs. ${prop.precio}
+    </span><br/>
+    <a 
+      href="/buscar-alquiler/${prop.id}" 
+      style="
+        display:inline-block;
+        margin-top:8px;
+        padding:6px 12px;
+        background:#198754;
+        color:#fff;
+        text-decoration:none;
+        border-radius:6px;
+        font-size:13px;
+      "
+    >
+      Ver detalles
+    </a>
+  </div>`);
         });
 
         return () => {
