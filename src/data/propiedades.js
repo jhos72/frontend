@@ -10,6 +10,22 @@ import cuartoImg1 from "../assets/cuarto1.jpg";
 import cuartoImg2 from "../assets/cuarto2.jpg";
 import cuartoImg3 from "../assets/cuarto3.jpg";
 
+import dep3img1 from "../assets/dep3img1.jpeg";
+import dep3img2 from "../assets/dep3img2.jpeg";
+import dep3img3 from "../assets/dep3img3.jpeg";
+import dep3img4 from "../assets/dep3img4.jpeg";
+
+import dep4img1 from "../assets/dep4img1.jpeg";
+import dep4img2 from "../assets/dep4img2.jpeg";
+import dep4img3 from "../assets/dep4img3.jpeg";
+import dep4img4 from "../assets/dep4img4.jpeg";
+import dep4img5 from "../assets/dep4img5.jpeg";
+import dep4img6 from "../assets/dep4img6.jpeg";
+import dep4img7 from "../assets/dep4img7.jpeg";
+import dep4img8 from "../assets/dep4img8.jpeg";
+import dep4img9 from "../assets/dep4img9.jpeg"; 
+import dep4img10 from "../assets/dep4img10.jpeg";
+
 const propiedades = [
     {
         id: 1,
@@ -78,6 +94,75 @@ const propiedades = [
             lng: -63.147472,
         },
         descripcion: "Departamento tipo monoambiente completamente amoblado, diseñado para brindar comodidad y funcionalidad en un solo espacio. El inmueble cuenta con todos los servicios básicos incluidos, ofreciendo un ambiente práctico y confortable, ideal tanto para estudiantes como para profesionales que buscan independencia y tranquilidad."
+    },
+    {
+        id: 3,
+        titulo: "Habitacion en alquiler",
+        precio: 600,
+        tipo: "Habitacion",
+        tamanio: "16 m²",
+        zona: "Norte",
+        direccion: "Calle 4(entre 3er y 4to anillo).Cerca de IC Norte, Multicenter y Mercado 4 de noviembre",
+        servicios: [
+            "Agua",
+            "Electricidad",
+            "Garaje para moto"
+        ],
+        imagenes: [
+            dep3img1,
+            dep3img2,
+            dep3img3,
+            dep3img4
+        ],
+        /*contacto: {
+            nombre: "Jose Luis",
+            apellido: "Berrios",
+            celular: "78625134",
+        },*/
+        ubicacion: {
+            lat: -17.776273,
+            lng: -63.207523,
+        },
+        descripcion: "Solo para una persona. No se aceptan mascotas. Sin deposito de garantia.  "
+    },
+    {
+        id: 4,
+        titulo:"DEPARTAMENTO EN ALQUILER",
+        precio: 4000,
+        tipo: "Departamento",
+        tamanio: "215 m²",
+        zona: "Norte",
+        direccion: "1er Anillo (C/ Warner esq. Viedman)",
+        servicios: [
+            "Agua",
+            "Electricidad",
+            "Gas domiciliario",
+            "Area de servicio"
+        ],
+        imagenes: [
+            dep4img1,
+            dep4img2,
+            dep4img3,
+            dep4img4,
+            dep4img4,
+            dep4img4,
+            dep4img5,
+            dep4img6,
+            dep4img7,
+            dep4img8,
+            dep4img9,
+            dep4img10
+        ],
+        /*contacto: {
+            nombre: "Jose Luis",
+            apellido: "Berrios",
+            celular: "78625134",
+        },*/
+        ubicacion: {
+            lat: -17.785534,
+            lng: -63.172183,
+        },
+        descripcion: "El departamento cuenta con 3 dormitorios(1 en Suite), todos los ambientes con A/C, cocina cerrada y area de servicio completa"
     },
 ];
 

@@ -118,12 +118,12 @@ const VerDetalles = () => {
 */}
                                 {/* BOTÓN */}
                                 <ContactButton
-                                    telefono={propiedad.contacto?.celular || "61928711"}
-                                    mensaje={`Hola, estoy interesado en la propiedad: ${propiedad.titulo}`}
+                                    telefono={propiedad.contacto?.celular || "78070618"}
+                                    mensaje={`Hola, estoy interesado en la propiedad: ${propiedad.titulo}, ubicada en ${propiedad.direccion}., ¿podrías brindarme más información?.`}
                                     variant="success"
                                     size="lg"
                                 >
-                                    Contactar al propietario
+                                    Contactar al asesor
                                 </ContactButton>
                             </Tab>
 
