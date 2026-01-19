@@ -48,11 +48,11 @@ const propiedades = [
             cuartoImg2,
             cuartoImg3
         ],
-        /*contacto: {
-            nombre: "José Luis",
-            apellido: "Berrios",
-            celular: "78625134",
-        },*/
+        contacto: {
+            nombre: "Marianela",
+            apellido: "Salvatierra",
+            celular: "78070618",
+        },
         ubicacion: {
             lat: -17.790806,
             lng: -63.201444,
@@ -84,11 +84,11 @@ const propiedades = [
             deptoImg6,
             deptoImg7
         ],
-        /*contacto: {
-            nombre: "Jose Luis",
-            apellido: "Berrios",
-            celular: "78625134",
-        },*/
+        contacto: {
+            nombre: "Marinela",
+            apellido: "Salvatierra",
+            celular: "78070618",
+        },
         ubicacion: {
             lat: -17.749444,
             lng: -63.147472,
@@ -114,11 +114,11 @@ const propiedades = [
             dep3img3,
             dep3img4
         ],
-        /*contacto: {
-            nombre: "Jose Luis",
-            apellido: "Berrios",
-            celular: "78625134",
-        },*/
+        contacto: {
+            nombre: "Marinela",
+            apellido: "Salvatierra",
+            celular: "78070618",
+        },
         ubicacion: {
             lat: -17.776273,
             lng: -63.207523,
@@ -153,11 +153,11 @@ const propiedades = [
             dep4img9,
             dep4img10
         ],
-        /*contacto: {
-            nombre: "Jose Luis",
-            apellido: "Berrios",
-            celular: "78625134",
-        },*/
+        contacto: {
+            nombre: "Marinela",
+            apellido: "Salvatierra",
+            celular: "78070618",
+        },
         ubicacion: {
             lat: -17.785534,
             lng: -63.172183,

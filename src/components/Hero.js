@@ -2,10 +2,14 @@ import { Container, Button, InputGroup, FormControl, Row, Col } from "react-boot
 import { useUser } from "../context/UserContext"
 import { heroOptions } from "../utils/heroOptions"
 import HeroImg from "../assets/imag1.jpg"
+import { Link } from "react-router-dom"
+import { useState } from "react"
 
 const Hero = () => {
     const { userType } = useUser()
     const content = heroOptions[userType]
+
+    const [search, setSearch] = useState("")
 
     const primary = "#1F4E79"
     const accent = "#F3A712"
@@ -15,9 +19,9 @@ const Hero = () => {
         <section
             style={{
                 backgroundImage: `linear-gradient(
-            rgba(31, 78, 121, 0.30),
-            rgba(31, 78, 121, 0.10)
-        ), url(${HeroImg})`,
+                    rgba(31, 78, 121, 0.30),
+                    rgba(31, 78, 121, 0.10)
+                ), url(${HeroImg})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 minHeight: "80vh",
@@ -35,6 +39,8 @@ const Hero = () => {
 
                         <div className="mt-4 d-flex gap-3 flex-wrap">
                             <Button
+                                as={Link}
+                                to={content.pathPrimary}
                                 style={{
                                     backgroundColor: accent,
                                     color: primary,
@@ -45,15 +51,26 @@ const Hero = () => {
                                 {content.ctaPrimary}
                             </Button>
 
-                            <Button variant="outline-light">
+                            <Button
+                                as={Link}
+                                to={content.pathSecondary}
+                                variant="outline-light"
+                            >
                                 {content.ctaSecondary}
                             </Button>
                         </div>
 
                         {userType === "inquilino" && (
                             <InputGroup className="mt-4">
-                                <FormControl placeholder="Ciudad, zona o tipo de inmueble" />
+                                <FormControl
+                                    placeholder="Departamento, casa o habitación"
+                                    value={search}
+                                    onChange={(e) => setSearch(e.target.value)}
+                                />
+
                                 <Button
+                                    as={Link}
+                                    to={`/buscar-alquiler${search ? `?tipo=${encodeURIComponent(search)}` : ""}`}
                                     style={{
                                         backgroundColor: accent,
                                         color: primary,

@@ -3,11 +3,7 @@ export const menuOptions = {
         {
             label: "Inicio",
             path: "/",
-        },
-        {
-            label: "Nosotros",
-            path: "/nosotros",
-        },
+        },  
         {
             label: "Publicar propiedad",
             path: "/publicar",
@@ -18,10 +14,6 @@ export const menuOptions = {
         {
             label: "Inicio",
             path: "/",
-        },
-        {
-            label: "Nosotros",
-            path: "/nosotros",
         },
         {
             label: "Buscar alquiler",

@@ -103,19 +103,18 @@ const VerDetalles = () => {
 
                                 </ListGroup>
 
-                                {/* CONTACTO 
+                                {/* CONTACTO */}
                                 <div className="mb-4">
                                     <p className="fw-bold mb-1">
-                                        Contacto
+                                        Asesor de la propiedad
                                     </p>
                                     <p className="mb-0">
                                         {propiedad.contacto.nombre}{" "}
                                         {propiedad.contacto.apellido}
                                         <br />
-                                        {propiedad.contacto.celular}
+                                        {/*{propiedad.contacto.celular}*/}
                                     </p>
                                 </div>
-*/}
                                 {/* BOTÓN */}
                                 <ContactButton
                                     telefono={propiedad.contacto?.celular || "78070618"}

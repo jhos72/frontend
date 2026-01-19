@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaWhatsapp, FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaWhatsapp,  FaEnvelope, FaFacebook, FaInstagram,  FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -26,12 +26,13 @@ const Footer = () => {
                     <Col md={4} sm={12}>
                         <h5 className="fw-bold mb-3">Contacto</h5>
 
-                        <p className="mb-2">
-                            <FaWhatsapp className="me-2" /> +591 70000000
+                        <p className="mb-2">   
+                            Jose Luis Berrios<br />
+                            <a href="https://wa.me/78625134?text=Quiero mas Informacion" target="_blank" rel="noopener noreferrer" className="text-light text-decoration-none">
+                                <FaWhatsapp className="me-2" /> 78625134
+                            </a>
                         </p>
-                        <p className="mb-2">
-                            <FaPhone className="me-2" /> (2) 2200000
-                        </p>
+                        
                         <p className="mb-2">
                             <FaEnvelope className="me-2" /> contacto@rentabolivia.com
                         </p>
@@ -61,7 +62,7 @@ const Footer = () => {
                                 <FaInstagram size={22} />
                             </a>
                             <a className="text-light" href="#">
-                                <FaTwitter size={22} />
+                                <FaTiktok size={22} />
                             </a>
                         </div>
                     </Col>
