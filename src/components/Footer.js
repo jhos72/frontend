@@ -20,6 +20,7 @@ const Footer = () => {
                             Conectamos propietarios verificados con inquilinos de manera segura,
                             rápida y 100% online.
                         </p>
+
                     </Col>
 
                     {/* Contacto */}
@@ -28,7 +29,12 @@ const Footer = () => {
 
                         <p className="mb-2">
                             Jose Luis Berrios<br />
-                            <a href="https://wa.me/78625134?text=Quiero mas Informacion" target="_blank" rel="noopener noreferrer" className="text-light text-decoration-none">
+                            <a
+                                href="https://wa.me/59178625134?text=Quiero%20más%20información%20sobre%20alquileres"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-light text-decoration-none"
+                            >
                                 <FaWhatsapp className="me-2" /> 78625134
                             </a>
                         </p>
@@ -40,31 +46,28 @@ const Footer = () => {
 
                     {/* Enlaces */}
                     <Col md={4} sm={12}>
-                        <h5 className="fw-bold mb-3">Enlaces</h5>
-
+                        <h5 className="fw-bold mb-3">Visita nuestras redes sociales</h5>
+                        <div className="d-flex my-3">
+                            <a className="text-light me-3" href="https://www.facebook.com" target="_blank" rel="noreferrer">
+                                <FaFacebook size={22} />
+                            </a>
+                            <a className="text-light me-3" href="https://www.instagram.com" target="_blank" rel="noreferrer">
+                                <FaInstagram size={22} />
+                            </a>
+                            <a className="text-light" href="https://www.tiktok.com" target="_blank" rel="noreferrer">
+                                <FaTiktok size={22} />
+                            </a>
+                        </div>
                         <p className="mb-1">
                             <a href="/politicas" className="text-light text-decoration-none">
                                 Política de privacidad
                             </a>
                         </p>
-
                         <p className="mb-1">
                             <a href="/faq" className="text-light text-decoration-none">
                                 Preguntas frecuentes
                             </a>
                         </p>
-
-                        <div className="d-flex mt-3">
-                            <a className="text-light me-3" href="https://www.facebook.com">
-                                <FaFacebook size={22} />
-                            </a>
-                            <a className="text-light me-3" href="https://www.instagram.com">
-                                <FaInstagram size={22} />
-                            </a>
-                            <a className="text-light" href="https://www.tiktok.com">
-                                <FaTiktok size={22} />
-                            </a>
-                        </div>
                     </Col>
                 </Row>
 
