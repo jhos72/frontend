@@ -33,7 +33,6 @@ const propiedades = [
         precio: 700,
         tipo: "Habitacion",
         tamanio: "6 m²",
-        banos: "Privado",
         zona: "Este",
         direccion: "Calle Madrejon #18",
         servicios: [
@@ -65,7 +64,7 @@ const propiedades = [
         precio: 1800,
         tipo: "Departamento",
         tamanio: "15 m²",
-        banos: "Privado",
+
         zona: "Norte",
         direccion: "Cambodromo 5to anillo",
         servicios: [
