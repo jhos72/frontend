@@ -9,7 +9,7 @@ const Home = () => {
         <>
             <Hero />
             <Beneficios />
-            <ComoFunciona />
+            <ComoFunciona />            
             <CTA />
         </>
     )

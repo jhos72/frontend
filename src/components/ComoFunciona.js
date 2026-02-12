@@ -25,7 +25,7 @@ const ComoFunciona = () => {
                 </div>
 
                 {/* CAROUSEL */}
-                <Carousel indicators={false} interval={2000}>
+                <Carousel indicators={false} interval={3000}>
                     {content.steps.map((step, index) => (
                         <Carousel.Item key={index}>
                             <div className="d-flex justify-content-center">

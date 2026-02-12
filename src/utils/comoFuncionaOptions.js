@@ -1,53 +1,53 @@
 export const comoFuncionaOptions = {
+    inquilino: {
+        title: "¿Cómo funciona para inquilinos?",
+        subtitle:
+            "Encuentra la propiedad ideal de forma rápida, segura y con asesoría personalizada.",
+        steps: [
+            {
+                icon: "bi-search",
+                title: "Usa el buscador",
+                description:
+                    "Selecciona el tipo de propiedad que buscas: casa, departamento o habitación."
+            },
+            {
+                icon: "bi-sliders",
+                title: "Elige el tipo de operación",
+                description:
+                    "Indica si deseas alquilar, comprar o acceder a un anticrético según tu necesidad."
+            },
+            {
+                icon: "bi-chat-dots",
+                title: "Contáctate con un asesor",
+                description:
+                    "Un asesor inmobiliario te ayudará a concretar la opción que mejor se adapte a tu presupuesto y ubicación."
+            }
+        ]
+    },
+
     propietario: {
         title: "¿Cómo funciona para propietarios?",
         subtitle:
-            "Publica tu propiedad con respaldo profesional y consigue inquilinos confiables.",
+            "Publica tu propiedad fácilmente y con el respaldo de asesoría inmobiliaria.",
         steps: [
             {
                 icon: "bi-ui-checks",
                 title: "Completa el formulario",
                 description:
-                    "Déjanos los datos de tu propiedad y tus datos de contacto en menos de 5 minutos."
+                    "Registra los datos de tu propiedad y tu información de contacto en pocos minutos."
             },
             {
-                icon: "bi-person-lines-fill",
-                title: "Habla con una asesora",
+                icon: "bi-house-gear",
+                title: "Define el tipo de publicación",
                 description:
-                    "Un asesor inmobiliario te contactará para validar la información y resolver dudas."
+                    "Selecciona si deseas alquilar, vender o publicar tu propiedad en modalidad anticrético."
             },
             {
-                icon: "bi-house-add",
-                title: "Publicamos tu propiedad",
+                icon: "bi-envelope-paper",
+                title: "Envío y asesoría",
                 description:
-                    "Tu inmueble se publica y se ofrece a inquilinos verificados."
-            }
-        ]
-    },
-
-    inquilino: {
-        title: "¿Cómo funciona para inquilinos?",
-        subtitle:
-            "Encuentra un alquiler seguro y adecuado a tus necesidades sin complicaciones.",
-        steps: [
-            {
-                icon: "bi-clipboard-check",
-                title: "Completa tu solicitud",
-                description:
-                    "Cuéntanos qué tipo de alquiler estás buscando y tu presupuesto."
-            },
-            {
-                icon: "bi-chat-dots",
-                title: "Habla con una asesora",
-                description:
-                    "Te ayudamos a resolver dudas y validar las mejores opciones disponibles."
-            },
-            {
-                icon: "bi-house-heart",
-                title: "Encuentra tu alquiler ideal",
-                description:
-                    "Te conectamos con propiedades que se ajustan a tus necesidades."
+                    "Los datos se envían desde tu correo o puedes contactarte directamente con un asesor para continuar el proceso."
             }
         ]
     }
-}
+};
